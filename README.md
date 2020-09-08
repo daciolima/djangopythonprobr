@@ -2,9 +2,9 @@
 Módulo Django do Curso PythonPro com Deploy no Heroku
 
 [![Build Status](https://travis-ci.org/daciolima/djangopythonprobr.svg?branch=master)](https://travis-ci.org/daciolima/djangopythonprobr)
+[![codecov](https://codecov.io/gh/daciolima/djangopythonprobr/branch/master/graph/badge.svg)](https://codecov.io/gh/daciolima/djangopythonprobr)
 [![Updates](https://pyup.io/repos/github/daciolima/djangopythonprobr/shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
 [![Python 3](https://pyup.io/repos/github/daciolima/djangopythonprobr/python-3-shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
-
 
 
 #### Instalando as libs em ambiente de desenvolvimento
@@ -26,7 +26,7 @@ exclude = .venv
 ##########################################
 
 
-#### PyUp (Monitor de código testado)
+#### PyUp (Monitor de update de libs)
 > - Setar o repositório do projeto que está no github configurando no site pyup.io;
 > - Criar arquivo .pyup.yml e realizar configuração:
 
@@ -79,6 +79,20 @@ mesmo os módulos de testes.
 
 ##########################################
 
+#### Pytest-Cov (Cobertura de tests e relatório)
+Com a cobertura de teste podemos dizer qual área do 
+projeto a ser testado e obter o relatório deste.
+Instalar em ambiente de desenvolvimento as libs:
+- pytest-cov -> Cobertura de teste.
+- codecov -> Gerador de relatório de cobertura (https://codecov.io/)
+```console
+pipenv install --dev 'pytest-cov' codecov
+```
+Rodar cobertura via terminal:
+```console
+pipenv run pytest --cov=apps
+```
+##########################################
 
 ##### Arquivo para Heroku 
 Criar na raiz o arquivo Procfile e colocar a seguinte configuração

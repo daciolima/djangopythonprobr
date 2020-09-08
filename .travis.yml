@@ -5,9 +5,15 @@ env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
+# Comando para instalar as libs.
 install:
   - pip install pipenv
   - pipenv sync --dev
+# Comandos a serem realizados para ser executados
 script:
   - pipenv run flake8
-  - pipenv run pytest
+  - pipenv run pytest --cov=apps
+
+# Rodando e gerando o relatório após o build de tests
+after_success:
+  - pipenv run codecov
