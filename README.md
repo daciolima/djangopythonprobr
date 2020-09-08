@@ -2,6 +2,8 @@
 Módulo Django do Curso PythonPro
 
 [![Build Status](https://travis-ci.org/daciolima/djangopythonprobr.svg?branch=master)](https://travis-ci.org/daciolima/djangopythonprobr)
+[![Updates](https://pyup.io/repos/github/daciolima/djangopythonprobr/shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
+[![Python 3](https://pyup.io/repos/github/daciolima/djangopythonprobr/python-3-shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
 
 
 
@@ -47,5 +49,69 @@ install:
   - pipenv sync --dev
 script:
   - pipenv run flake8
+```
 
+##### Arquivo para Heroku 
+Criar na raiz o arquivo Procfile e colocar a seguinte configuração
+```console
+web: gunicorn admin.wsgi --log-file -
+```
 
+##### Comandos Django
+Criar projeto django na raiz
+```console
+django-admin startproject <nome_projeto> .
+````
+
+Ver os comandos disponíveis pelo arquivo manager.py
+```console
+python manager.py --help
+````
+
+Subir o server em ambiente de desevolvimento
+```console
+python manager.py runserver
+````
+
+Gerar um alias para o arquivo manager.py através da variável local
+criada pelo .venv
+```console
+alias mng='python $VIRTUAL_ENV/../manage.py'
+````
+
+##### Comandos Heroku
+Instalando em máquinas MacOS
+```console
+brew tap heroku/brew && brew install heroku
+````
+
+Logando via terminal no Heroku
+```console
+heroku login
+````
+
+Criando uma aplicação no Heroku via terminal
+```console
+heroku apps:create <Nome_aplicação>
+````
+
+Enviando entrega via git para o Heroku
+```console
+git push heroku branch_local:master -f
+````
+
+Desabilitando coleta de arquivos estáticos no Heroku
+```console
+heroku config:set DISABLE_COLLECTSTATIC=1
+````
+
+Visualizando logs da aplicação no Heroku
+````console
+heroku logs --tail 
+````
+
+##### Outros comandos
+Git: Visualizar os remote configurados
+```console
+git remote -v
+````
