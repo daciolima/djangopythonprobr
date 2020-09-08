@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from decouple import config
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -23,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '$^-86doeyx$r%f+w+y@_ym(*isk57xsll(c0se6owxn&!ijtbe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# Como o retorno deve ser um booleano, usa-se então um cast como segundo parâmetro.
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['*']
 

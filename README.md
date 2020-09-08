@@ -61,7 +61,7 @@ script:
 ##########################################
 
 
-##### Pytest-Django
+#### Pytest-Django
 Instalar a lib pytest-django
 ```console
 pipenv install -d pytest-django
@@ -94,7 +94,7 @@ pipenv run pytest --cov=apps
 ```
 ##########################################
 
-##### Arquivo para Heroku 
+#### Arquivo para Heroku 
 Criar na raiz o arquivo Procfile e colocar a seguinte configuração
 ```console
 web: gunicorn admin.wsgi --log-file -
@@ -103,7 +103,7 @@ web: gunicorn admin.wsgi --log-file -
 ##########################################
 
 
-##### Comandos Django
+#### Comandos Django
 Criar projeto django na raiz
 ```console
 django-admin startproject <nome_projeto> .
@@ -127,7 +127,7 @@ alias mng='python $VIRTUAL_ENV/../manage.py'
 
 ##########################################
 
-##### Comandos Heroku
+#### Comandos Heroku
 Instalando em máquinas MacOS
 ```console
 brew tap heroku/brew && brew install heroku
@@ -148,6 +148,11 @@ Enviando entrega via git para o Heroku
 git push heroku branch_local:master -f
 ````
 
+Alterando variável DEGUG do arquivo settings do Django
+```console
+heroku config:set DEGUB=False
+````
+
 Desabilitando coleta de arquivos estáticos no Heroku
 ```console
 heroku config:set DISABLE_COLLECTSTATIC=1
@@ -160,7 +165,7 @@ heroku logs --tail
 
 ##########################################
 
-##### Outros comandos
+#### Outros comandos
 Git: Visualizar os remote configurados
 ```console
 git remote -v
