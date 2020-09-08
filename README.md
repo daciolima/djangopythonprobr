@@ -1,5 +1,5 @@
 # djangopythonprobr
-Módulo Django do Curso PythonPro
+Módulo Django do Curso PythonPro com Deploy no Heroku
 
 [![Build Status](https://travis-ci.org/daciolima/djangopythonprobr.svg?branch=master)](https://travis-ci.org/daciolima/djangopythonprobr)
 [![Updates](https://pyup.io/repos/github/daciolima/djangopythonprobr/shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
