@@ -21,7 +21,10 @@ Configuração: Criar o arquivo .flake8 na raiz do projeto e colocar as seguinte
 max-line-length = 120
 exclude = .venv
 ```
-##### -------------------------------------------------
+
+
+##########################################
+
 
 #### PyUp (Monitor de código testado)
 > - Setar o repositório do projeto que está no github configurando no site pyup.io;
@@ -32,6 +35,9 @@ requirements:
   - Pipfile
   - Pipfile.lock
 ````
+
+##########################################
+
 
 #### Travis-CI (Integração Contínua)
 > - Setar o repositório  do projeto que está no github configurando no site travis-ci.org;
@@ -51,11 +57,37 @@ script:
   - pipenv run flake8
 ```
 
+
+##########################################
+
+
+##### Pytest-Django
+Instalar a lib pytest-django
+```console
+pipenv install -d pytest-django
+````
+Criar o arquivo pytest.ini na raiz e setar a seguinte configuração:
+```console
+[pytest]
+DJANGO_SETTINGS_MODULE = admin.settings
+````
+
+1 - Setar no Pycharm em preferences/Tools/Python Integrated Tools/Testing
+para testes com o pytest
+2 - Criar um diretorio tests dentro de cada app a ser testada e dentro o 
+mesmo os módulos de testes.
+
+##########################################
+
+
 ##### Arquivo para Heroku 
 Criar na raiz o arquivo Procfile e colocar a seguinte configuração
 ```console
 web: gunicorn admin.wsgi --log-file -
 ```
+
+##########################################
+
 
 ##### Comandos Django
 Criar projeto django na raiz
@@ -78,6 +110,8 @@ criada pelo .venv
 ```console
 alias mng='python $VIRTUAL_ENV/../manage.py'
 ````
+
+##########################################
 
 ##### Comandos Heroku
 Instalando em máquinas MacOS
@@ -110,8 +144,12 @@ Visualizando logs da aplicação no Heroku
 heroku logs --tail 
 ````
 
+##########################################
+
 ##### Outros comandos
 Git: Visualizar os remote configurados
 ```console
 git remote -v
 ````
+
+##########################################
