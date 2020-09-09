@@ -125,6 +125,13 @@ criada pelo .venv
 alias mng='python $VIRTUAL_ENV/../manage.py'
 ````
 
+Gerar nova SECRET_KEY, caso necessário.
+Dentro do ambiente ./venv ativado entre no shell do python.
+```console
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+````
+
 ##########################################
 
 #### Comandos Heroku
@@ -148,7 +155,8 @@ Enviando entrega via git para o Heroku
 git push heroku branch_local:master -f
 ````
 
-Alterando variável DEGUG do arquivo settings do Django
+Configurando variável de ambiente DEGUG do arquivo settings do Django 
+dentro do Heroku
 ```console
 heroku config:set DEGUB=False
 ````
@@ -156,6 +164,16 @@ heroku config:set DEGUB=False
 Desabilitando coleta de arquivos estáticos no Heroku
 ```console
 heroku config:set DISABLE_COLLECTSTATIC=1
+````
+
+Setando uma SECRET_KEY do arquivo settings.py no ambiente Heroku
+```console
+heroku config:set SECRET_KEY='Chave Secreta'
+````
+
+Listando as variável de ambiente no Heroku
+```console
+heroku config
 ````
 
 Visualizando logs da aplicação no Heroku
