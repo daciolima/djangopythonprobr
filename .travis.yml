@@ -17,7 +17,7 @@ install:
 
 # Rodando antes dos scripts
 before_scripts:
-  - psql -C "CREATE DATABASE testedb;" -U postgres
+  - psql -c "CREATE DATABASE testedb;" -U postgres
 
 # Comandos a serem realizados para ser executados
 script:
