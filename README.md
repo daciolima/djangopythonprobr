@@ -119,6 +119,11 @@ Subir o server em ambiente de desevolvimento
 python manager.py runserver
 ````
 
+Coletar staticfiles
+```console
+python manager.py collectstatic
+````
+
 Gerar um alias para o arquivo manager.py através da variável local
 criada pelo .venv
 ```console
