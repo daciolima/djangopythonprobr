@@ -171,6 +171,11 @@ Setando uma SECRET_KEY do arquivo settings.py no ambiente Heroku
 heroku config:set SECRET_KEY='Chave Secreta'
 ````
 
+Configurando domains no Heroku. Obs: Conta Heroku deve está verificada
+```console
+heroku domains:add DOMINIO
+````
+
 Listando as variável de ambiente no Heroku
 ```console
 heroku config
