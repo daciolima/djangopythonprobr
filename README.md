@@ -186,6 +186,11 @@ Listando as variável de ambiente no Heroku
 heroku config
 ````
 
+Removendo um variável de ambiente no Heroku
+```console
+heroku config:unset DISABLE_COLLECTSTATIC
+````
+
 Visualizando logs da aplicação no Heroku
 ````console
 heroku logs --tail 
