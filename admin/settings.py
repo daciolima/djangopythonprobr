@@ -170,6 +170,3 @@ if AWS_ACCESS_KEY_ID:
 
     # OBS Após configurações acima para a aws rode o comando:
     # python manager.py collectstatic --no-input
-
-
-
