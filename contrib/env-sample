@@ -2,3 +2,8 @@ DEBUG=False
 SECRET_KEY='KEY12345'
 ALLOWED_HOST=localhost, 127.0.0.1
 DATABASE_URL=postgres://postgres:postgres@localhost/testedb
+
+# Config do aws
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_STORAGE_BUCKET_NAME=
