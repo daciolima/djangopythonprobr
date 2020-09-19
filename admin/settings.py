@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home',
+    'apps.base',
 ]
 
 MIDDLEWARE = [
@@ -173,4 +173,4 @@ if AWS_ACCESS_KEY_ID:
 
 
 # Conf Table User
-AUTH_USER_MODEL = "app.home.User"
+AUTH_USER_MODEL = 'base.User'
