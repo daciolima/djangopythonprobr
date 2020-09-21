@@ -20,6 +20,7 @@ collectfast = "*"
 whitenoise = "*"
 django-debug-toolbar = "*"
 python-decouple = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.8"
