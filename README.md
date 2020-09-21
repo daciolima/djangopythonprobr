@@ -196,6 +196,62 @@ Visualizando logs da aplicação no Heroku
 heroku logs --tail 
 ````
 
+Agendar backup postgresql no Heroku
+````console
+heroku pg:backups:schedule DATABASE_URL --at '02:00 America/Recife'
+````
+
+Interromper agenda de backup
+````console
+heroku pg:backups:unschedule DATABASE_URL --app Nome_APP
+````
+
+Visualizar agenda de backup
+````console
+heroku pg:backups:schedules --app Nome_APP
+````
+
+Criando URL pública para download de backup
+````console
+heroku pg:backups:url b001 --app Nome_APP
+````
+
+Visualizando a URL pública do download de backup
+````console
+heroku pg:backups:url --app Nome_APP | cat
+````
+
+Realizar download de backup
+````console
+heroku pg:backups:download
+````
+
+Checando download de backup realizados
+````console
+heroku pg:backups --app Nome_APP
+````
+
+Ver detalhes de um backup específico baixado
+````console
+heroku pg:backups:info <ID_BACKUP> --app Nome_APP
+````
+
+Deletando backup específico
+````console
+heroku pg:backups:delete <ID_BACKUP> --app Nome_APP
+````
+
+Restaurando backup específico
+````console
+heroku pg:backups:restore b101 DATABASE_URL --app sushi
+````
+
+Restaurando backup de uma APP para outra APP
+````console
+heroku pg:backups:restore sushi::b101 DATABASE_URL --app sushi-staging
+````
+
+
 ##########################################
 
 #### Outros comandos
