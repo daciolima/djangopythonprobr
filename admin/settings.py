@@ -60,8 +60,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'admin.urls'
 
-INTERNAL_IPS = config('INTERNAL_IPS', default='127.0.0.1')
-# cast=Csv(), 
+INTERNAL_IPS = config('INTERNAL_IPS', default='127.0.0.1')  # cast=Csv()
 
 # Conf da app debug toolbar
 if DEBUG:
