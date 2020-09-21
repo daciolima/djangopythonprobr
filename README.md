@@ -1,6 +1,9 @@
 # djangopythonprobr
 Módulo Django do Curso PythonPro com Deploy no Heroku
 
+Estudo e desenvolvimento da APP buscando está conforme orientações dos Doze Fatores:
+https://12factor.net/pt_br/
+
 [![Build Status](https://travis-ci.org/daciolima/djangopythonprobr.svg?branch=master)](https://travis-ci.org/daciolima/djangopythonprobr)
 [![codecov](https://codecov.io/gh/daciolima/djangopythonprobr/branch/master/graph/badge.svg)](https://codecov.io/gh/daciolima/djangopythonprobr)
 [![Updates](https://pyup.io/repos/github/daciolima/djangopythonprobr/shield.svg)](https://pyup.io/repos/github/daciolima/djangopythonprobr/)
@@ -262,5 +265,3 @@ git remote -v
 
 ##########################################
 
-Estudo e desenvolvimento da APP buscando está conforme orientações dos Doze Fatores:
-https://12factor.net/pt_br/
