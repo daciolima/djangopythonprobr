@@ -18,6 +18,7 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 collectfast = "*"
 whitenoise = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.8"

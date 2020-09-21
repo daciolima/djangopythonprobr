@@ -16,6 +16,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import dj_database_url
 from decouple import config
+# Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'apps.base',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -57,6 +59,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'admin.urls'
+
+INTERNAL_IPS = config('INTERNAL_IPS', default='127.0.0.1')
+# cast=Csv(), 
+
+# Conf da app debug toolbar
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 TEMPLATES = [
     {
