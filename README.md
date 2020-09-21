@@ -261,3 +261,6 @@ git remote -v
 ````
 
 ##########################################
+
+Estudo e desenvolvimento da APP buscando está conforme orientações dos Doze Fatores:
+https://12factor.net/pt_br/
