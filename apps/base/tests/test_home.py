@@ -6,7 +6,7 @@ from apps.base.django_assertions import asert_contains
 
 @pytest.fixture
 def resp(client):
-    resp = client.get(reverse('home'))
+    resp = client.get(reverse('base:home'))
     return resp
 
 
@@ -19,4 +19,4 @@ def test_title_page(resp):
 
 
 def test_title_link(resp):
-    asert_contains(resp, f'href="{reverse("home")}">DL-DEV</a>')
+    asert_contains(resp, f'href="{reverse("base:home")}">DL-DEV</a>')
