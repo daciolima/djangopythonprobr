@@ -21,7 +21,7 @@ from apps.base import urls as base_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(base_urls), name='base')
+    path('', include(base_urls))
 ]
 
 if settings.DEBUG:
