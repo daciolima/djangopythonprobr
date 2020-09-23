@@ -1,14 +1,23 @@
+import pytest
 from django.test import Client
+from django.urls import reverse
 
 from apps.base.django_assertions import asert_contains
 
 
-def test_status_code(client: Client):
-    resp = client.get('/')
+@pytest.fixture
+def resp(client):
+    resp = client.get(reverse('home'))
+    return resp
+
+
+def test_status_code(resp):
     assert resp.status_code == 200
 
 
-def test_title_page(client: Client):
-    resp = client.get('/')
-    asert_contains(resp, '<title>Dácio Lima Dev</title>')
+def test_title_page(resp):
+    asert_contains(resp, '<title>Dacio Lima Dev</title>')
 
+
+def test_title_link(resp):
+    asert_contains(resp, f'href="{reverse("home")}">DL-DEV</a>')
