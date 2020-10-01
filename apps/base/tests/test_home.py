@@ -1,7 +1,7 @@
 import pytest
 from django.urls import reverse
 
-from apps.base.django_assertions import asert_contains
+from apps.base.django_assertions import assert_contains
 
 
 @pytest.fixture
@@ -15,8 +15,8 @@ def test_status_code(resp):
 
 
 def test_title_page(resp):
-    asert_contains(resp, '<title>Dacio Lima Dev</title>')
+    assert_contains(resp, '<title>Dacio Lima Dev</title>')
 
 
 def test_title_link(resp):
-    asert_contains(resp, f'href="{reverse("base:home")}">DL-DEV</a>')
+    assert_contains(resp, f'href="{reverse("base:home")}">DL-DEV</a>')

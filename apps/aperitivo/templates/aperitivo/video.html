@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dacio Lima Dev</title>
+
+    <meta name="description" content="Projeto no Curso PythonPro">
+    <meta name="author" content="Dácio Lima">
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="navbar-toggler-icon"></span>
+				</button> <a class="navbar-brand" href="{% url 'base:home' %}">DL-DEV</a>
+
+			</nav>
+	    </div>
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4 mb-3">Vídeo Aperitivo - Motivação</h1>
+            </div>
+            <div class="row">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BwAF7ke7Px0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+<footer class="main-footer mt-4 pt-5 text-light">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h4>Contato</h4>
+				<address>
+					+55 xx xxxxx-xxxx
+					<br/>
+					<a href="mailto:dacio@email.com" class="text-light">dacio@email.com</a>
+				</address>
+			</div>
+		</div>
+	</div>
+	<div class="rights pb-2 pt-2">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					{% now 'Y' %} Todos os direitos reservados.
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>
