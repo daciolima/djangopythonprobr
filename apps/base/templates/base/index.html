@@ -1,33 +1,15 @@
+{% extends "base/base.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Dacio Lima - Home{% endblock title %}</title>
+{% block description %}Conteúdo gratuítos de Python{% endblock %}
 
-    <title>Dacio Lima Dev</title>
 
-    <meta name="description" content="Projeto no Curso PythonPro">
-    <meta name="author" content="Dácio Lima">
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-  </head>
-  <body>
-
-    <div class="container">
+{% block content %}
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="{% url 'base:home' %}">DL-DEV</a>
 
-			</nav>
 			<div class="jumbotron">
 				<h2>
 					<strong>Dácio Lima</strong>
@@ -35,31 +17,31 @@
 
 				<h4 class="mt-4">Matrículas abertas - Investimento R$  </h4>
 				<!-- INICIO DO BOTAO PAGSEGURO -->
-<!--				<a href="https://pag.ae/7Ws7cSZw7/button" target="_blank" title="Pagar com PagSeguro"><img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar.gif" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a>-->
+				<!--				<a href="https://pag.ae/7Ws7cSZw7/button" target="_blank" title="Pagar com PagSeguro"><img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar.gif" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a>-->
 				<!-- FIM DO BOTAO PAGSEGURO --><!-- FIM DO BOTAO PAGSEGURO -->
 
 
 
-<!--				<h4 class="mt-4">Lista de Espera de Curso</h4>-->
-<!--				<form action="https://gmail.us2.list-manage.com/subscribe/post?u=90827c4dddd70fd964d34a598&amp;id=19b20dec8b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-row align-items-center" target="_blank" novalidate>-->
-<!--					<div class="form-row align-items-center">-->
-<!--						<div class="col-auto">-->
-<!--							<label class="sr-only" for="mce-EMAIL">Email</label>-->
-<!--							<input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="Digite seu email">-->
-<!--						</div>-->
+				<!--				<h4 class="mt-4">Lista de Espera de Curso</h4>-->
+				<!--				<form action="https://gmail.us2.list-manage.com/subscribe/post?u=90827c4dddd70fd964d34a598&amp;id=19b20dec8b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-row align-items-center" target="_blank" novalidate>-->
+				<!--					<div class="form-row align-items-center">-->
+				<!--						<div class="col-auto">-->
+				<!--							<label class="sr-only" for="mce-EMAIL">Email</label>-->
+				<!--							<input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="Digite seu email">-->
+				<!--						</div>-->
 
-<!--						<div class="col-auto">-->
-<!--							<label class="sr-only" for="mce-FNAME">Nome</label>-->
-<!--							<input type="email" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Digite seu nome">-->
-<!--						</div>-->
+				<!--						<div class="col-auto">-->
+				<!--							<label class="sr-only" for="mce-FNAME">Nome</label>-->
+				<!--							<input type="email" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Digite seu nome">-->
+				<!--						</div>-->
 
-<!--						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_90827c4dddd70fd964d34a598_19b20dec8b" tabindex="-1" value=""></div>-->
+				<!--						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_90827c4dddd70fd964d34a598_19b20dec8b" tabindex="-1" value=""></div>-->
 
-<!--						<div class="col-auto">-->
-<!--							<input type="submit" value="Cadastrar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</form>-->
+				<!--						<div class="col-auto">-->
+				<!--							<input type="submit" value="Cadastrar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">-->
+				<!--						</div>-->
+				<!--					</div>-->
+				<!--				</form>-->
 
 			</div>
 		</div>
@@ -76,7 +58,7 @@
 					</p>
 
 					A 12 anos na área TI. Experiência como suporte técnico em informática, suporte ERP Totvs Protheus.
-Além de me dedicar no atual cargo de técnico N2, continuo obtendo conhecimento em DataScience com
+					Além de me dedicar no atual cargo de técnico N2, continuo obtendo conhecimento em DataScience com
 					Python e desenvolvimento de software no modelo de arquitetura em nuvem usando
 					Python e Javascript. Persistência com MySQL, PostgresSQL e MongoDB.
 					Gerenciamento de versão com Git.
@@ -85,35 +67,4 @@ Além de me dedicar no atual cargo de técnico N2, continuo obtendo conhecimento
 			</div>
 		</div>
 	</div>
-</div>
-
-<footer class="main-footer mt-4 pt-5 text-light">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h4>Contato</h4>
-				<address>
-					+55 xx xxxxx-xxxx
-					<br/>
-					<a href="mailto:dacio@email.com" class="text-light">dacio@email.com</a>
-				</address>
-			</div>
-		</div>
-	</div>
-	<div class="rights pb-2 pt-2">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					{% now 'Y' %} Todos os direitos reservados.
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
-
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% endblock %}
