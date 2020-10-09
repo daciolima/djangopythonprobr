@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 
 def video(request, slug):
+
     video = {
         'titulo': 'Video Aperitivo: Motivação',
         'youtube_id': 'BwAF7ke7Px0'
