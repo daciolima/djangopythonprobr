@@ -15,7 +15,9 @@ def test_status_code(resp):
 
 
 def test_title_page(resp):
+
     assert_contains(resp, '<title>Dacio Lima - Home</title>')
+
 
 
 def test_title_link(resp):
