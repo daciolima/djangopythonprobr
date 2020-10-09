@@ -13,7 +13,7 @@ def test_tatus_code(resp):
 
 
 def test_titulo_video(resp):
-    assert_contains(resp, '<h1 class="mt-4 mb-3">Video Aperitivo: Motivação</h1>')
+    assert_contains(resp, '<h1 class="mt-4 mb-3">Luciano Ramalho OO em Python</h1>')
 
 
 def test_conteudo_video(resp):
