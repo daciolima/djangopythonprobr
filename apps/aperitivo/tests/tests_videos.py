@@ -8,7 +8,7 @@ def resp(client):
     return client.get(reverse('aperitivo:video', args=('motivacao',)))
 
 
-def test_tatus_code(resp):
+def test_status_code(resp):
     assert resp.status_code == 200
 
 
