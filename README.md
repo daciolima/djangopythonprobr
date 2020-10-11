@@ -1,7 +1,7 @@
 # djangopythonprobr
 Módulo Django do Curso PythonPro com Deploy no Heroku
 
-Estudo e desenvolvimento da APP buscando está conforme orientações dos Doze Fatores:
+Estudo e desenvolvimento Web buscando está conforme orientações dos Doze Fatores:
 https://12factor.net/pt_br/
 
 [![Build Status](https://travis-ci.org/daciolima/djangopythonprobr.svg?branch=master)](https://travis-ci.org/daciolima/djangopythonprobr)

@@ -1,11 +1,25 @@
 from django.shortcuts import render
 
 
-def video(request, slug):
-    midias = {
-        'motivacao': {'titulo': 'Luciano Ramalho OO em Python', 'youtube_id': 'BwAF7ke7Px0'},
-        'instalacao-windows': {'titulo': 'Python Set Pratice - Conjuntos', 'youtube_id': 'euSpcIikBrw'}
-    }
+class Video:
+    def __init__(self, slug, titulo, youtube_id):
+        self.slug = slug
+        self.titulo = titulo
+        self.youtube_id = youtube_id
 
-    midia = midias[slug]
+
+midias = [
+    Video('motivacao', 'Luciano Ramalho OO em Python', 'BwAF7ke7Px0'),
+    Video('instalacao-windows', 'Python Set Pratice - Conjuntos', 'euSpcIikBrw')
+    ]
+
+videos_dct = {v.slug: v for v in midias}
+
+
+def indice(request):
+    return render(request, 'aperitivo/indice.html', context={'videos': midias})
+
+
+def video(request, slug):
+    midia = videos_dct[slug]
     return render(request, 'aperitivo/video.html', context={'video': midia})
