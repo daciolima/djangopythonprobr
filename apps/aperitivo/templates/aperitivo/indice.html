@@ -5,21 +5,49 @@
 {% block description %}Vídeos com todos os vídeos gratuítos{% endblock %}
 
 {% block content %}
-        <div class="container">
+
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="mt-4 mb-3">Lista de Vídeos Aperitivos</h1>
-                    <ol>
-                        {% for video in videos  %}
+                    <div class="card">
+                        <h5 class="card-header">
+                            Lista de Vídeos Aperitivos
+                        </h5>
+                        <div class="card-body">
+                            <ol>
+                                {% for video in videos  %}
 
-                            <li><a href="{{ video.get_absolute_url }}" target="_blank">{{ video.titulo }}</a></li>
+                                    <li><a href="{{ video.get_absolute_url }}" target="_blank">{{ video.titulo }}</a></li>
 
-                        {% empty %}
-                            <li>Não encontrado nenhum vídeo em aperitivo.</li>
-                        {% endfor %}
-                    </ol>
+                                {% empty %}
+                                    <li>Não encontrado nenhum vídeo em aperitivo.</li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<h5 class="card-header">
+					About
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						<img  class="img-thumbnail float-left mr-3 foto_perfil" src="{% static 'img/perfil.png' %}" alt="Foto Dácio Lima">
+					</p>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique sapien sed auctor faucibus. Suspendisse quis libero sit amet elit fringilla elementum. Aenean pharetra vehicula dictum. Praesent mattis eros congue leo commodo, blandit ullamcorper eros viverra. Mauris ultrices dolor in lacus dignissim tempor. Quisque pharetra consectetur nulla, vitae luctus lorem blandit vitae. Nulla vitae aliquam purus. Cras volutpat justo aliquet ex volutpat pretium. Quisque lectus purus, tincidunt non nisl eget, vulputate tincidunt mauris. Maecenas semper lorem velit, eu pretium lectus congue eget. Duis placerat mauris est, eget feugiat libero aliquam at.
+Maecenas varius sapien ante, quis lacinia lorem tincidunt commodo. Integer urna lectus, accumsan vitae mauris ut, imperdiet porta tellus. Curabitur id diam viverra, fermentum dolor eu, consequat diam. Nunc vestibulum leo in tortor bibendum luctus. Vivamus dui nunc, porta at mauris sed, tempor viverra nunc. Proin feugiat sed metus sit amet rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Proin volutpat purus eu faucibus semper. Nam eleifend eleifend eros, vehicula lacinia odio hendrerit et. Mauris vitae dictum diam, a vulputate justo. Aenean quis nisi dapibus, dictum lorem ac, luctus ligula. Nulla eu porttitor tortor. Vestibulum imperdiet accumsan maximus. Cras ex sapien, placerat gravida lacinia eget, varius et mauris. Nunc maximus risus in enim vulputate rhoncus. Maecenas dictum urna id consequat consequat. Ut lobortis metus vel ante convallis facilisis. Curabitur ornare enim id ex condimentum blandit. Integer turpis neque, sagittis ac hendrerit in, commodo sit amet velit.
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 {% endblock %}
