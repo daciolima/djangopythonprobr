@@ -257,11 +257,14 @@ heroku pg:backups:restore sushi::b101 DATABASE_URL --app sushi-staging
 
 ##########################################
 
-#### Outros comandos
-Git: Visualizar os remote configurados
+#### Comandos Docker
+Docker: Sobe imagem do docker descrita no arquivo docker-compose.yml
+Obs: Após a criação do container é criado dentro do projeto um diretório .pgdata 
 ```console
-git remote -v
+docker-compose up
 ````
+
+
 
 ##########################################
 
