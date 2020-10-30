@@ -1,5 +1,5 @@
-# djangopythonprobr
-Módulo Django do Curso PythonPro com Deploy no Heroku
+# Python - Django
+Django com Deploy no Heroku
 
 Estudo e desenvolvimento Web buscando está conforme orientações dos Doze Fatores:
 https://12factor.net/pt_br/
