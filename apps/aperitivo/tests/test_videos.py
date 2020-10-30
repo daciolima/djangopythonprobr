@@ -1,5 +1,6 @@
 import pytest
 from django.urls import reverse
+from model_mommy import mommy
 
 from apps.aperitivo.models import Video
 from apps.base.django_assertions import assert_contains
@@ -7,9 +8,10 @@ from apps.base.django_assertions import assert_contains
 
 @pytest.fixture
 def video(db):  # o parametro db permite o pytest tesr acesso aos modelos
-    vi = Video(slug='motivacao', titulo='Luciano Ramalho OO em Python', youtube_id='BwAF7ke7Px0')
-    vi.save()
-    return vi
+    # vi = Video(slug='motivacao', titulo='Luciano Ramalho OO em Python', youtube_id='BwAF7ke7Px0')
+    # vi.save()
+    # return vi
+    return mommy.make(Video)
 
 
 @pytest.fixture
