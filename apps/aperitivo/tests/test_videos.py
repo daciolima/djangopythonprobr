@@ -8,10 +8,10 @@ from apps.base.django_assertions import assert_contains
 
 @pytest.fixture
 def video(db):  # o parametro db permite o pytest tesr acesso aos modelos
+    return mommy.make(Video)
     # vi = Video(slug='motivacao', titulo='Luciano Ramalho OO em Python', youtube_id='BwAF7ke7Px0')
     # vi.save()
     # return vi
-    return mommy.make(Video)
 
 
 @pytest.fixture
