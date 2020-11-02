@@ -22,6 +22,7 @@ whitenoise = "*"
 django-debug-toolbar = "*"
 python-decouple = "*"
 sentry-sdk = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.8"

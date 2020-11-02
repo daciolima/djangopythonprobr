@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'apps.base',
     'apps.aperitivo',
     'apps.modulos',
+    'ordered_model',
 ]
 
 
@@ -84,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.modulos.context_processors.listar_modulos',
             ],
         },
     },
