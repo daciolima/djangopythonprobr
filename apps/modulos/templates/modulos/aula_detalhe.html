@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Dacio Lima - Aperitivos{% endblock %}
+{% block description %}Vídeos gratuítos de Python{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mt-4 mb-3">{{ aula.titulo }}</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ aula.youtube_id}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -23,6 +23,8 @@ django-debug-toolbar = "*"
 python-decouple = "*"
 sentry-sdk = "*"
 django-ordered-model = "*"
+ipython = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.8"

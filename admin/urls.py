@@ -9,8 +9,8 @@ from apps.modulos import urls as modulos_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(base_urls), name='home'),
-    path('aperitivo/', include(aperitivo_urls), name='video'),
-    path('modulos/', include(modulos_urls), name='modulos')
+    path('aperitivo/', include(aperitivo_urls)),
+    path('modulos/', include(modulos_urls)),
 ]
 
 if settings.DEBUG:

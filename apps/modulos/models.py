@@ -17,3 +17,22 @@ class Modulo(OrderedModel):
 
     def get_absolute_url(self):
         return reverse('modulos:detalhe', kwargs={'slug': self.slug})
+
+
+# Toda Relação um para muitos gera uma chave estrangeira(ForeignKey)
+class Aula(OrderedModel):
+    titulo = models.CharField(max_length=64)
+    slug = models.SlugField(unique=True)
+    modulo = models.ForeignKey('Modulo', on_delete=models.PROTECT)
+    # Com relação a quem o campo order será considerado:
+    order_with_respect_to = 'modulo'
+    youtube_id = models.CharField(max_length=32)
+
+    class Meta(OrderedModel.Meta):
+        pass
+
+    def __str__(self):
+        return self.titulo
+
+    def get_absolute_url(self):
+        return reverse('modulos:aula', kwargs={'slug': self.slug})
