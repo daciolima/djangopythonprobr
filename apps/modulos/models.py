@@ -8,6 +8,8 @@ class Modulo(OrderedModel):
     publico = models.TextField()
     descricao = models.TextField()
     slug = models.SlugField(unique=True)
+    # Por conta de haver relação entre módulos e aulas de Um para muitos
+    # O ORM criar um método aula_set(Conjunto de aulas pertecente a esse modulo).
 
     class Meta(OrderedModel.Meta):
         pass

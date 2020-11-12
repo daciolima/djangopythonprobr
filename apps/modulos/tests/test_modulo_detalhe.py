@@ -20,7 +20,8 @@ def aulas(modulo):
 
 @pytest.fixture
 def resp(client, modulo, aulas):
-    resp = client.get(reverse("modulos:detalhe", kwargs={"slug", modulo.slug}))
+    # O reverse faz referência a App e o name na url.
+    resp = client.get(reverse("modulos:detalhe", kwargs={"slug": modulo.slug}))
     return resp
 
 
