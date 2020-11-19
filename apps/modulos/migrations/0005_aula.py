@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=64)),
                 ('slug', models.SlugField(unique=True)),
                 ('modulo', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='modulos.modulo')),
+                ('youtube_id', models.CharField(max_length=32)),
             ],
             options={
                 'ordering': ('order',),

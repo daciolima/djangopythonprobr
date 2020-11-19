@@ -45,4 +45,3 @@ def test_aulas_titulos(resp, aulas):
 def test_aulas_links(resp, aulas):
     for aula in aulas:
         assert_contains(resp, aula.get_absolute_url())
-

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'apps.base',
     'apps.aperitivo',
     'apps.modulos',
+    'apps.turmas',
     'ordered_model',
     'django_extensions',
 ]

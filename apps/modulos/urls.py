@@ -7,4 +7,3 @@ urlpatterns = [
     path('aula/<slug:slug>', aula, name='aula'),
     path('', indice, name='indice'),
 ]
-

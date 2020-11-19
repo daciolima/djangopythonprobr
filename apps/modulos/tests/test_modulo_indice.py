@@ -54,4 +54,3 @@ def test_aulas_titulos(resp, aulas: List[Aula]):
 def test_aulas_url(resp, aulas: List[Aula]):
     for aula in aulas:
         assert_contains(resp, aula.get_absolute_url())
-
