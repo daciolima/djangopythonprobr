@@ -40,7 +40,7 @@ jobs:
         pipenv run flake8 .
     - name: Test with pytest
       run: |
-        pipenv run pytest djangopythonprobr --cov=djangopythonprobr
+        pipenv run pytest apps --cov=apps
     - name: Posting Coverage
       env:
         CODECOV_TOKEN: "3c3e1497-1d1b-4176-b55b-372f3f861fc8"
