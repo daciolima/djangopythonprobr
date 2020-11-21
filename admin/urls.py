@@ -9,6 +9,7 @@ from apps.turmas import urls as turmas_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contas/', include('django.contrib.auth.urls')),
     path('', include(base_urls), name='home'),
     path('aperitivo/', include(aperitivo_urls)),
     path('modulos/', include(modulos_urls)),

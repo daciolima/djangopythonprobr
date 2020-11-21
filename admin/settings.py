@@ -203,6 +203,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Conf Table User
 AUTH_USER_MODEL = 'base.User'
 
+# Redirect após login
+LOGIN_REDIRECT_URL = '/modulos/'
+
 # Conf do SENTRY(Monitor de falhas)
 SENTRY_DSN = config('SENTRY_DSN', default=None)
 
