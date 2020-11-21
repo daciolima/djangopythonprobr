@@ -40,17 +40,18 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+
 INSTALLED_APPS = [
+    'apps.base',
+    'apps.aperitivo',
+    'apps.modulos',
+    'apps.turmas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.base',
-    'apps.aperitivo',
-    'apps.modulos',
-    'apps.turmas',
     'ordered_model',
     'django_extensions',
 ]
@@ -147,6 +148,16 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Configuração de envio de Email
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -206,7 +217,11 @@ AUTH_USER_MODEL = 'base.User'
 # Redirect após login
 LOGIN_REDIRECT_URL = '/modulos/'
 
+# Redirect após logout
 LOGOUT_REDIRECT_URL = '/'
+
+# Redirecionamento para acesso negado
+LOGIN_URL = '/contas/login/'
 
 # Conf do SENTRY(Monitor de falhas)
 SENTRY_DSN = config('SENTRY_DSN', default=None)
