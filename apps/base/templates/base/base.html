@@ -3,70 +3,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{% block title %}Dacio Lima{% endblock %}</title>
+    <title>{% block title %}Dacio Lima{% endblock %}</title>
 
-	<meta name="description" content="{% block description %}Projeto no Curso PythonPro{% endblock %}">
-	<meta name="author" content="Dácio Lima">
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <meta name="description" content="{% block description %}Projeto no Curso PythonPro{% endblock %}">
+    <meta name="author" content="Dácio Lima">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
 </head>
 <body>
 
 <div class="container">
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<!--		<a class="navbar-brand" href="{% url 'base:home' %}">DL-DEV</a>-->
-<!--		<a class="navbar-brand" href="{% url 'aperitivo:indice' %}">Aperitivo</a>-->
+        <!--		<a class="navbar-brand" href="{% url 'base:home' %}">DL-DEV</a>-->
+        <!--		<a class="navbar-brand" href="{% url 'aperitivo:indice' %}">Aperitivo</a>-->
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
 
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Módulos
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						{% for modulo in MODULOS %}
-						    <a class="dropdown-item" href="{{ modulo.get_absolute_url }}">{{ modulo.titulo }}</a>
-							<div class="dropdown-divider"></div>
-						{% endfor %}
-						
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Módulos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for modulo in MODULOS %}
+                        <a class="dropdown-item" href="{{ modulo.get_absolute_url }}">{{ modulo.titulo }}</a>
+                        <div class="dropdown-divider"></div>
+                        {% endfor %}
 
-<!--						<div class="dropdown-divider"></div>-->
-<!--						<a class="dropdown-item" href="#">Something else here</a>-->
-					</div>
-				</li>
-<!--				<li class="nav-item">-->
-<!--					<a class="nav-link disabled" href="#">Disabled</a>-->
-<!--				</li>-->
-			</ul>
-<!--			<form class="form-inline my-2 my-lg-0">-->
-<!--				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--			</form>-->
-  </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            {% if user.is_authenticated %}
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link">{{ user.first_name }}</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="btn btn-light" href="{% url 'logout' %}">Sair</a>
+                </li>
+            </ul>
+
+            {% else %}
+            <a class="btn btn-light" href="{% url 'login' %}">Entrar</a>
+            {% endif %}
+
+        </div>
 
 
+    </nav>
 
-
-	</nav>
-
-	{% block content %} {% endblock %}
+    {% block content %} {% endblock %}
 
 </div>
 
